@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="cart-icon" id="cartIcon">
+            <span class="cart-count">0</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Cart
+        </div>
+        <nav class="categories">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#software" class="active">Software</a></li>
+                <li><a href="#laptops">Laptops</a></li>
+                <li><a href="#desktop">Desktop</a></li>
+                <li><a href="#networking">Networking</a></li>
+                <li><a href="#videoconf">Video Conferencing</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="software" class="product-section">
+            <h2>Software Solutions</h2>
+            <div class="product-grid">
+                <!-- Product cards will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Other sections follow the same pattern -->
+        <section id="laptops" class="product-section">
+            <h2>Laptops</h2>
+            <div class="product-grid"></div>
+        </section>
+
+        <section id="desktop" class="product-section">
+            <h2>Desktop Systems</h2>
+            <div class="product-grid"></div>
+        </section>
+
+        <section id="networking" class="product-section">
+            <h2>Networking Equipment</h2>
+            <div class="product-grid"></div>
+        </section>
+
+        <section id="videoconf" class="product-section">
+            <h2>Video Conferencing</h2>
+            <div class="product-grid"></div>
+        </section>
+    </main>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Product Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="software">Software</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="desktop">Desktop</option>
+                        <option value="networking">Networking</option>
+                        <option value="videoconf">Video Conferencing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">Product Details</label>
+                    <textarea id="details" name="details" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be inserted here by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0.00</span>
+            </div>
+            <button class="checkout-button">Proceed to Inquiry</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
