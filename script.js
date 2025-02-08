@@ -6,7 +6,7 @@ const products = {
             name: 'Microsoft Office 365',
             image: '/images/Microsoft Logo.png',
             details: [
-                'Complete suite of productivity apps',
+                'Complete suite of productivity apps and more',
                 '1TB OneDrive storage per user',
                 'Real-time collaboration features',
                 'Exchange email hosting',
