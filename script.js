@@ -114,7 +114,7 @@ const products = {
             details: [
                 'Apple M3 Max chip for high performance',
                 '16-inch Retina display',
-                'All-day battery life',
+                'All-day battery life.',
                 'Premium build quality with sleek design',
                 'Advanced security features including Touch ID and secure boot'
             ],
