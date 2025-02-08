@@ -125,7 +125,7 @@ const products = {
             name: 'Lenovo V 15 Gen 3',
             image: '/images/lenovo-v15-gen-4-core-i5-13th-gen-fhd-laptop-3-400x280h-removebg-preview.png',
             details: [
-                'Latest Intel Core i7 processor',
+                'Latest Intel Core i7 processor.',
                 '16 GB RAM and 1 TB SSD storage',
                 '13.4-inch 4K UHD+ display',
                 'Slim and lightweight design at 2.8 pounds',
