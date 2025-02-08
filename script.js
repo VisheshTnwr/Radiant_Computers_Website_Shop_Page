@@ -4,7 +4,7 @@ const products = {
         {
             id: 's1',
             name: 'Microsoft Office 365',
-            image: '/images/HP Workstation2 G9.png',
+            image: '/images/Microsoft Logo.png',
             details: [
                 'Complete suite of productivity apps',
                 '1TB OneDrive storage per user',
@@ -16,8 +16,8 @@ const products = {
         },
         {
             id: 's2',
-            name: 'Adobe Creative Cloud',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Tally Prime',
+            image: '/images/Tallly_Icon-removebg-preview.png',
             details: [
                 'Full access to Photoshop, Illustrator, and more',
                 'Cloud storage and asset syncing',
@@ -29,8 +29,8 @@ const products = {
         },
         {
             id: 's3',
-            name: 'AutoCAD 2024',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Quick Heal',
+            image: '/images/Quick Heal Logo.png',
             details: [
                 '2D and 3D CAD design tools',
                 'Industry-specific toolsets',
@@ -42,8 +42,8 @@ const products = {
         },
         {
             id: 's4',
-            name: 'Windows 11 Pro',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Seqrite Endpoint Security',
+            image: '/images/seqrite_Logo-removebg-preview.png',
             details: [
                 'Advanced security features',
                 'Business management tools',
@@ -55,8 +55,8 @@ const products = {
         },
         {
             id: 's5',
-            name: 'Norton 360 Deluxe',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Windows 11',
+            image: '/images/Windows_11_logo.svg.png',
             details: [
                 'Real-time threat protection',
                 'Secure VPN',
@@ -70,8 +70,8 @@ const products = {
     laptops: [
         {
             id: 'l1',
-            name: 'HP EliteBook 840 G11',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Lenovo V14',
+            image: '/images/Lenovo V 14 FrontSide No Back.png',
             details: [
                 'Intel Core Ultra 5 135U processor',
                 '16 GB RAM and 512 GB SSD storage',
@@ -83,8 +83,8 @@ const products = {
         },
         {
             id: 'l2',
-            name: 'Lenovo ThinkPad X1 Carbon Gen 12',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'HP 240 G8',
+            image: '/images/HP240-G8-removebg-preview.png',
             details: [
                 'Intel Core Ultra 5 135U processor',
                 '16 GB RAM and 512 GB SSD storage',
@@ -96,8 +96,8 @@ const products = {
         },
         {
             id: 'l3',
-            name: 'HP Spectre x360 14 (2024)',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Apple Macbook Pro',
+            image: '/images/Macbook-removebg-preview.png',
             details: [
                 'Intel Meteor Lake processors',
                 '2.8K OLED touch display',
@@ -109,8 +109,8 @@ const products = {
         },
         {
             id: 'l4',
-            name: 'Apple MacBook Pro 16 (M3 Max)',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Dell Latitude 3450',
+            image: '/images/Latitude_3450-removebg-preview.png',
             details: [
                 'Apple M3 Max chip for high performance',
                 '16-inch Retina display',
@@ -122,8 +122,8 @@ const products = {
         },
         {
             id: 'l5',
-            name: 'Dell XPS 13 Plus (2025)',
-            image: 'https://via.placeholder.com/300x200',
+            name: 'Lenovo V 15 Gen 3',
+            image: '/images/lenovo-v15-gen-4-core-i5-13th-gen-fhd-laptop-3-400x280h-removebg-preview.png',
             details: [
                 'Latest Intel Core i7 processor',
                 '16 GB RAM and 1 TB SSD storage',
