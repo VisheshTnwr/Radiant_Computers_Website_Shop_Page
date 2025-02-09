@@ -1,4 +1,4 @@
-// Product Data Structure
+// Products
 const products = {
     software: [
         {
@@ -348,9 +348,9 @@ const products = {
     
 };
 
-// DOM Elements
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize elements
+    
     const cartIcon = document.getElementById('cartIcon');
     const cartSidebar = document.getElementById('cartSidebar');
     const closeCart = document.querySelector('.close-cart');
@@ -363,10 +363,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTotal = document.getElementById('cartTotal');
     const checkoutButton = document.querySelector('.checkout-button');
 
-    // Cart State
+   
     let cart = [];
 
-    // Render all products on page load
+    
     function renderProducts() {
         Object.entries(products).forEach(([category, items]) => {
             const section = document.getElementById(category);
@@ -393,13 +393,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Cart Functions
+    
     function updateCart() {
-        // Update cart count
+        
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalItems;
 
-        // Update cart items display
+        
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item" data-id="${item.id}">
                 <div class="cart-item-info">
@@ -415,14 +415,14 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        // Update total
+        
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         cartTotal.textContent = `₹${total.toFixed(2)}`;
     }
 
     function addToCart(productId) {
         let product;
-        // Find product in all categories
+        
         for (const categoryProducts of Object.values(products)) {
             product = categoryProducts.find(p => p.id === productId);
             if (product) break;
@@ -458,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // UI Functions
+    
     function toggleCart() {
         cartSidebar.classList.toggle('active');
         overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
@@ -470,27 +470,27 @@ document.addEventListener('DOMContentLoaded', () => {
         notification.textContent = message;
         document.body.appendChild(notification);
     
-        // Remove notification after animation
+        
         setTimeout(() => {
             notification.remove();
         }, 3000);
     }
     
 
-    // Event Listeners
+    
     function setupEventListeners() {
-        // Cart toggle
+        
         cartIcon.addEventListener('click', toggleCart);
         closeCart.addEventListener('click', toggleCart);
 
-        // Close contact form when clicking the close button
+        
         closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
             overlay.style.display = 'none';
         });
 
 
-        // Buy buttons
+        
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('buy-button')) {
                 const productId = e.target.dataset.id;
@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Cart item controls
+        
         cartItems.addEventListener('click', (e) => {
             const productId = e.target.dataset.id;
             if (!productId) return;
@@ -512,20 +512,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Overlay click
+        
         overlay.addEventListener('click', () => {
             cartSidebar.classList.remove('active');
             modal.style.display = 'none';
             overlay.style.display = 'none';
         });
 
-        // Contact form
+        
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const formData = new FormData(contactForm);
             console.log('Form submitted:', Object.fromEntries(formData));
             
-            // Clear cart and close modal
+            
             cart = [];
             updateCart();
             modal.style.display = 'none';
@@ -534,7 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showNotification('Thank you for your inquiry!');
         });
 
-        // Category navigation
+        
         document.querySelectorAll('.categories a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -545,13 +545,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Checkout button
+        
         checkoutButton.addEventListener('click', () => {
             modal.style.display = 'block';
             overlay.style.display = 'block';
             cartSidebar.classList.remove('active');
 
-            // Pre-fill form with cart items
+            
             const details = cart.map(item => 
                 `${item.name} (Quantity: ${item.quantity})`
             ).join('\n');
@@ -559,7 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize page
+    
     renderProducts();
     setupEventListeners();
 });
