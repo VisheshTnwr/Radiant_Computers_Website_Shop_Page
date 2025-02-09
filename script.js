@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             `).join('')}
                         </ul>
                         <button class="buy-button" data-id="${product.id}">
-                            Add to Cart
+                            Add to Cart!
                         </button>
                     </div>
                 </div>
