@@ -420,6 +420,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cartTotal.textContent = `₹${total.toFixed(2)}`;
     }
 
+
+
     function addToCart(productId) {
         let product;
         
@@ -441,6 +443,8 @@ document.addEventListener('DOMContentLoaded', () => {
         showNotification('Product added to cart');
     }
 
+
+
     function removeFromCart(productId) {
         cart = cart.filter(item => item.id !== productId);
         updateCart();
@@ -459,11 +463,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     
+
+
     function toggleCart() {
         cartSidebar.classList.toggle('active');
         overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
     }
 
+
+    
     function showNotification(message) {
         const notification = document.createElement('div');
         notification.className = 'notification';
@@ -476,6 +484,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
     
+
+
 
     
     function setupEventListeners() {
