@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    
+
     function showNotification(message) {
         const notification = document.createElement('div');
         notification.className = 'notification';
