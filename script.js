@@ -573,3 +573,57 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     setupEventListeners();
 });
+
+
+// Contact form email sending
+
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("6CBdy4QG56m7wZz0m"); // Initialize EmailJS with Public Key
+
+    const contactForm = document.getElementById("contactForm");
+    const modal = document.getElementById("contactModal");
+    const closeButton = document.querySelector(".close-button");
+
+    // Close modal when clicking the close button
+    closeButton.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Collect user input values
+        const userName = document.getElementById("name").value;
+        const userEmail = document.getElementById("email").value;
+        const userPhone = document.getElementById("phone").value;
+        const userCategory = document.getElementById("category").value;
+        const userDetails = document.getElementById("details").value;
+
+        // Send email using EmailJS
+        emailjs.send("service_iaxh15m", "template_pkqhkql", {
+            name: userName,
+            email: userEmail,
+            phone: userPhone,
+            category: userCategory,
+            details: userDetails
+        }).then(
+            function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Your inquiry has been sent successfully!");
+                contactForm.reset(); // Clear the form
+                modal.style.display = "none"; // Close the modal
+            },
+            function (error) {
+                console.log("FAILED...", error);
+                alert("Failed to send inquiry. Please try again.");
+            }
+        );
+    });
+});
