@@ -12,7 +12,6 @@ const products = {
                 'Exchange email hosting',
                 'Teams communication platform'
             ],
-            
             price: 99.99
         },
         {
