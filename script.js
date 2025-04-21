@@ -67,6 +67,7 @@ const products = {
             price: 89.99
         }
     ],
+    
     laptops: [
         {
             id: 'l1',
