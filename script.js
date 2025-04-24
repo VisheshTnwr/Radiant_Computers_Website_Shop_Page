@@ -14,6 +14,7 @@ const products = {
             ],
             price: 99.99
         },
+        
         {
             id: 's2',
             name: 'Tally Prime',
