@@ -338,7 +338,6 @@ const products = {
     },
   ],
 };
-
 document.addEventListener("DOMContentLoaded", () => {
   const cartIcon = document.getElementById("cartIcon");
   const cartSidebar = document.getElementById("cartSidebar");
