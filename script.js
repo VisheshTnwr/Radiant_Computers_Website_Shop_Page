@@ -351,7 +351,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotal = document.getElementById("cartTotal");
   const checkoutButton = document.querySelector(".checkout-button");
 
-  
   let cart = [];
 
   function renderProducts() {
