@@ -305,7 +305,6 @@ textarea {
     padding: 2rem;
     background-color: var(--secondary-bg);
 }
-
 .cart-total {
     display: flex;
     justify-content: space-between;
